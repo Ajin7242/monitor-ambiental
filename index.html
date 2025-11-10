@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monitor Ambiental Potosí</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css" />
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- MENÚ DE INICIO -->
+  <div id="inicio" class="inicio">
+    <div class="encabezado">
+      <div class="lado">
+        <img src="img/logo_uatf.png" alt="Logo UATF" class="imagen-encabezado" />
+        <p class="texto-encabezado">Universidad Autónoma Tomás Frías</p>
+      </div>
+      <div class="lado">
+        <img src="img/logo_carrera.jpg" alt="Ingeniería Electrónica" class="imagen-encabezado" />
+        <p class="texto-encabezado">Ingeniería Electrónica</p>
+      </div>
+    </div>
+
+    <img src="img/logo_potosi.jpg" alt="Bienvenida" class="banner" />
+    <div class="mensaje">
+      <h2>Bienvenido al Monitor Ambiental de Potosí</h2>
+      <p>Consulta en tiempo real los datos de temperatura, humedad, calidad del aire y más.</p>
+      <button onclick="entrar()">Ingresar al Panel</button>
+    </div>
+  </div>
+
+  <!-- PANEL DE MONITOREO -->
+  <div id="panel" style="display:none;">
+    <header class="panel-header">
+      <h1>🌦️ Monitor Ambiental Potosí</h1>
+      <div class="status-bar">
+        <div id="connStatus" class="conn disconnected">Desconectado</div>
+      </div>
+    </header>
+
+    <div class="grid" id="contenedor"></div>
+  </div>
+
+</body>
+</html>
