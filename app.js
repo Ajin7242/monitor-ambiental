@@ -8,10 +8,10 @@ const contenedor = document.getElementById("contenedor");
 const connStatus = document.getElementById("connStatus");
 
 const nodos = [
-  { id: 1, nombre: "Zona Norte" },
-  { id: 2, nombre: "Zona Sur" },
-  { id: 3, nombre: "Zona Central" },
-  { id: 4, nombre: "Zona Este" }
+  { id: 1, nombre: "Zona Central" },
+  { id: 2, nombre: "Zona Nueva Terminal" },
+  { id: 3, nombre: "Zona Cantumarca" },
+  { id: 4, nombre: "Zona San Alberto" }
 ];
 
 const variables = ["temperatura", "humedad", "aire", "lluvia", "estado"];
@@ -133,4 +133,5 @@ client.on("message", (topic, message) => {
     setTimeout(()=> elemento.classList.remove("change"), 300);
   }
   if (updatedEl) updatedEl.textContent = `Última actualización: ${now}`;
+
 });
